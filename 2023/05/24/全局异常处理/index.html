@@ -16,21 +16,24 @@
   <meta name="author" content="czr">
   <meta name="keywords" content="">
   
-    <meta name="description" content="职位管理功能 controller pojo  首先在Position实体类中添加日期格式化，返回年月日的json格式123@ApiModelProperty(value &#x3D; &quot;创建时间&quot;)@JsonFormat(pattern &#x3D; &quot;yyyy-MM-dd&quot;, timezone &#x3D; &quot;Asia&#x2F;Shanghai&quot;)private Loca">
+    <meta name="description" content="全局异常处理在Java应用程序中，全局异常处理可以帮助我们捕获和处理未处理的异常。 异常分为运行时异常和编译时异常 编译时异常一般通过try catch捕获 运行时异常只能尽量减少 异常不管在什么地方都有可能存在，全局异常处理能将所有异常处理取出，进行统一维护，正确返回一个友好的提示信息 有两种实现方式，一般共同存在  一种是通过注解（@controllerAdvis、@exceptionHand">
 <meta property="og:type" content="article">
-<meta property="og:title" content="职位管理功能">
-<meta property="og:url" content="http://czrgitee.gitee.io/2023/05/24/%E8%81%8C%E4%BD%8D%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD/index.html">
+<meta property="og:title" content="全局异常处理">
+<meta property="og:url" content="http://czrgitee.gitee.io/2023/05/24/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/index.html">
 <meta property="og:site_name" content="安徒生">
-<meta property="og:description" content="职位管理功能 controller pojo  首先在Position实体类中添加日期格式化，返回年月日的json格式123@ApiModelProperty(value &#x3D; &quot;创建时间&quot;)@JsonFormat(pattern &#x3D; &quot;yyyy-MM-dd&quot;, timezone &#x3D; &quot;Asia&#x2F;Shanghai&quot;)private Loca">
+<meta property="og:description" content="全局异常处理在Java应用程序中，全局异常处理可以帮助我们捕获和处理未处理的异常。 异常分为运行时异常和编译时异常 编译时异常一般通过try catch捕获 运行时异常只能尽量减少 异常不管在什么地方都有可能存在，全局异常处理能将所有异常处理取出，进行统一维护，正确返回一个友好的提示信息 有两种实现方式，一般共同存在  一种是通过注解（@controllerAdvis、@exceptionHand">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-05-24T09:04:06.000Z">
-<meta property="article:modified_time" content="2023-05-24T09:07:24.362Z">
+<meta property="og:image" content="https://gitee.com/czrgitee/typora-drawing-bed/raw/master/image/202305241735742.png">
+<meta property="og:image" content="https://gitee.com/czrgitee/typora-drawing-bed/raw/master/image/202305241737050.png">
+<meta property="article:published_time" content="2023-05-24T09:12:50.000Z">
+<meta property="article:modified_time" content="2023-05-24T09:37:20.725Z">
 <meta property="article:author" content="czr">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://gitee.com/czrgitee/typora-drawing-bed/raw/master/image/202305241735742.png">
   
   
   
-  <title>职位管理功能 - 安徒生</title>
+  <title>全局异常处理 - 安徒生</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -160,7 +163,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="职位管理功能"></span>
+            <span id="subtitle" data-typed-text="全局异常处理"></span>
           
         </div>
 
@@ -171,7 +174,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-24 17:04" pubdate>
+        <time datetime="2023-05-24 17:12" pubdate>
           2023年5月24日 下午
         </time>
       </span>
@@ -183,7 +186,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          950 字
         
       </span>
     
@@ -194,7 +197,7 @@
         
         
         
-          22 分钟
+          8 分钟
         
       </span>
     
@@ -232,7 +235,7 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">职位管理功能</h1>
+            <h1 style="display: none">全局异常处理</h1>
             
               <p class="note note-info">
                 
@@ -245,21 +248,24 @@
             
               <div class="markdown-body">
                 
-                <h2 id="职位管理功能"><a href="#职位管理功能" class="headerlink" title="职位管理功能"></a>职位管理功能</h2><ul>
-<li>controller</li>
-<li>pojo</li>
-</ul>
-<h4 id="首先在Position实体类中添加日期格式化，返回年月日的json格式"><a href="#首先在Position实体类中添加日期格式化，返回年月日的json格式" class="headerlink" title="首先在Position实体类中添加日期格式化，返回年月日的json格式"></a>首先在Position实体类中添加日期格式化，返回年月日的json格式</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@ApiModelProperty(value = &quot;创建时间&quot;)</span><br><span class="hljs-meta">@JsonFormat(pattern = &quot;yyyy-MM-dd&quot;, timezone = &quot;Asia/Shanghai&quot;)</span><br><span class="hljs-keyword">private</span> LocalDateTime createDate;<br></code></pre></td></tr></table></figure>
-
-<h2 id="controller"><a href="#controller" class="headerlink" title="controller"></a>controller</h2><p>要求使用menu中存在的请求路径，否则会报权限错误</p>
+                <h2 id="全局异常处理"><a href="#全局异常处理" class="headerlink" title="全局异常处理"></a>全局异常处理</h2><p>在Java应用程序中，全局异常处理可以帮助我们捕获和处理未处理的异常。</p>
+<p>异常分为<em>运行时异常</em>和<em>编译时异常</em></p>
+<p>编译时异常一般通过try catch捕获</p>
+<p>运行时异常只能尽量减少</p>
+<p>异常不管在什么地方都有可能存在，全局异常处理能将所有异常处理取出，进行统一维护，正确返回一个友好的提示信息</p>
+<p>有两种实现方式，一般共同存在</p>
 <ul>
-<li>增加职员信息</li>
-<li>单例删除职员信息</li>
-<li>批量删除职员信息</li>
-<li>查询职员信息</li>
-<li>修改职员信息</li>
+<li><p>一种是通过注解（@controllerAdvis、@exceptionHandler），只能处理控制器抛出的异常</p>
+</li>
+<li><p>一种是通过类，errorController类，可以处理所有的异常</p>
+</li>
 </ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.czr.common.RspBean;<br><span class="hljs-keyword">import</span> com.czr.pojo.Position;<br><span class="hljs-keyword">import</span> com.czr.service.IPositionService;<br><span class="hljs-keyword">import</span> io.swagger.annotations.Api;<br><span class="hljs-keyword">import</span> io.swagger.annotations.ApiOperation;<br><span class="hljs-keyword">import</span> org.springframework.beans.factory.annotation.Autowired;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.*;<br><br><span class="hljs-keyword">import</span> java.time.LocalDateTime;<br><span class="hljs-keyword">import</span> java.util.Arrays;<br><span class="hljs-keyword">import</span> java.util.List;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * &lt;p&gt;</span><br><span class="hljs-comment"> * 前端控制器</span><br><span class="hljs-comment"> * &lt;/p&gt;</span><br><span class="hljs-comment"> *</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> czr</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@since</span> 2023-05-17</span><br><span class="hljs-comment"> */</span><br><span class="hljs-meta">@RestController</span><br><span class="hljs-meta">@RequestMapping(&quot;/system/cfg&quot;)</span><br><span class="hljs-meta">@Api(tags = &quot;PositionController&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PositionController</span> &#123;<br><br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> IPositionService positionService;<br><br>    <span class="hljs-meta">@ApiOperation(value = &quot;增加职位信息&quot;)</span><br>    <span class="hljs-meta">@PostMapping(&quot;/&quot;)</span><br>    <span class="hljs-keyword">public</span> RspBean <span class="hljs-title function_">addPosition</span><span class="hljs-params">(<span class="hljs-meta">@RequestBody</span> Position position)</span> &#123;<br>        position.setCreateDate(LocalDateTime.now());  <span class="hljs-comment">//获取当前系统时间</span><br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">save</span> <span class="hljs-operator">=</span> positionService.save(position);<br>        <span class="hljs-keyword">if</span> (save) &#123;<br>            <span class="hljs-keyword">return</span> RspBean.success(<span class="hljs-string">&quot;增加职位信息成功&quot;</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> RspBean.error(<span class="hljs-string">&quot;增加职位信息失败&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-meta">@ApiOperation(value = &quot;删除职位信息&quot;)</span><br>    <span class="hljs-meta">@DeleteMapping(&quot;/&#123;id&#125;&quot;)</span><br>    <span class="hljs-keyword">public</span> RspBean <span class="hljs-title function_">delPositionById</span><span class="hljs-params">(<span class="hljs-meta">@PathVariable</span> Integer id)</span> &#123;<br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">remove</span> <span class="hljs-operator">=</span> positionService.removeById(id);<br>        <span class="hljs-keyword">if</span> (remove) &#123;<br>            <span class="hljs-keyword">return</span> RspBean.success(<span class="hljs-string">&quot;删除职位信息成功&quot;</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> RspBean.error(<span class="hljs-string">&quot;删除职位信息失败&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-meta">@ApiOperation(value = &quot;批量删除职位信息&quot;)</span><br>    <span class="hljs-meta">@DeleteMapping(&quot;/&quot;)</span><br>    <span class="hljs-keyword">public</span> RspBean <span class="hljs-title function_">delPositionByIds</span><span class="hljs-params">(Integer[] ids)</span> &#123;<br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">remove</span> <span class="hljs-operator">=</span> positionService.removeByIds(Arrays.asList(ids));<br>        <span class="hljs-keyword">if</span> (remove) &#123;<br>            <span class="hljs-keyword">return</span> RspBean.success(<span class="hljs-string">&quot;批量删除职位信息成功&quot;</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> RspBean.error(<span class="hljs-string">&quot;批量删除职位信息失败&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-meta">@ApiOperation(value = &quot;查询职位信息&quot;)</span><br>    <span class="hljs-meta">@GetMapping(&quot;/&quot;)</span><br>    <span class="hljs-keyword">public</span> RspBean <span class="hljs-title function_">getPosition</span><span class="hljs-params">()</span> &#123;<br>        List&lt;Position&gt; list = positionService.list();<br>        <span class="hljs-keyword">if</span> (!list.isEmpty()) &#123;<br>            <span class="hljs-keyword">return</span> RspBean.success(<span class="hljs-string">&quot;批量删除职位信息成功&quot;</span>, list);<br>        &#125;<br>        <span class="hljs-keyword">return</span> RspBean.error(<span class="hljs-string">&quot;批量删除职位信息失败&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-meta">@ApiOperation(value = &quot;更新职位信息&quot;)</span><br>    <span class="hljs-meta">@PutMapping(&quot;/&quot;)</span><br>    <span class="hljs-keyword">public</span> RspBean <span class="hljs-title function_">updatePosition</span><span class="hljs-params">(<span class="hljs-meta">@RequestBody</span> Position position)</span> &#123;<br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">update</span> <span class="hljs-operator">=</span> positionService.updateById(position);<br>        <span class="hljs-keyword">if</span> (update) &#123;<br>            <span class="hljs-keyword">return</span> RspBean.success(<span class="hljs-string">&quot;更新职位信息成功&quot;</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> RspBean.error(<span class="hljs-string">&quot;更新职位信息失败&quot;</span>);<br>    &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/czrgitee/typora-drawing-bed/raw/master/image/202305241735742.png" srcset="/img/loading.gif" lazyload alt="image-20230524173535669"></p>
+<p>代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.czr.common.RspBean;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.ExceptionHandler;<br><span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestControllerAdvice;<br><br><span class="hljs-keyword">import</span> java.sql.SQLException;<br><span class="hljs-keyword">import</span> java.sql.SQLIntegrityConstraintViolationException;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@author</span> czr</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@version</span> v1.0.0</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Package</span> : com.czr.exception</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Description</span> : 全局异常处理</span><br><span class="hljs-comment"> * <span class="hljs-doctag">@Create</span> on : 2023/5/24 17:30</span><br><span class="hljs-comment"> **/</span><br><br><span class="hljs-meta">@RestControllerAdvice</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GlobalException</span> &#123;<br><br>    <span class="hljs-meta">@ExceptionHandler(SQLException.class)</span><br>    <span class="hljs-keyword">public</span> RspBean <span class="hljs-title function_">mySQLException</span><span class="hljs-params">(SQLException e)</span> &#123;<br>        <span class="hljs-comment">//指定异常</span><br>        <span class="hljs-keyword">if</span> (e <span class="hljs-keyword">instanceof</span> SQLIntegrityConstraintViolationException) &#123;<br>            <span class="hljs-keyword">return</span> RspBean.error(<span class="hljs-string">&quot;操作失败，该数据有关联数据！&quot;</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> RspBean.error(<span class="hljs-string">&quot;数据库异常&quot;</span>);<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>效果</p>
+<p><img src="https://gitee.com/czrgitee/typora-drawing-bed/raw/master/image/202305241737050.png" srcset="/img/loading.gif" lazyload alt="image-20230524173701989"></p>
 
                 
               </div>
@@ -277,8 +283,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>职位管理功能</div>
-      <div>http://czrgitee.gitee.io/2023/05/24/职位管理功能/</div>
+      <div>全局异常处理</div>
+      <div>http://czrgitee.gitee.io/2023/05/24/全局异常处理/</div>
     </div>
     <div class="license-meta">
       
@@ -322,9 +328,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/24/%E5%85%A8%E5%B1%80%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" title="全局异常处理">
+                      <a href="/2023/05/25/%E8%81%8C%E7%A7%B0%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD/" title="职称管理功能">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">全局异常处理</span>
+                        <span class="hidden-mobile">职称管理功能</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -332,8 +338,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/24/%E5%85%B3%E4%BA%8Ehexo%E5%92%8Cfluid%E7%A2%B0%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="关于hexo和fluid碰到的问题">
-                        <span class="hidden-mobile">关于hexo和fluid碰到的问题</span>
+                      <a href="/2023/05/24/%E8%81%8C%E4%BD%8D%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD/" title="职位管理功能">
+                        <span class="hidden-mobile">职位管理功能</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -17,8 +17,8 @@
   <meta name="keywords" content="">
   
     <meta property="og:type" content="website">
-<meta property="og:title" content="归档">
-<meta property="og:url" content="http://czrgitee.gitee.io/archives/2022/page/2/index.html">
+<meta property="og:title" content="安徒生">
+<meta property="og:url" content="http://czrgitee.gitee.io/page/3/index.html">
 <meta property="og:site_name" content="安徒生">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="czr">
@@ -26,7 +26,7 @@
   
   
   
-  <title>归档 - 安徒生</title>
+  <title>安徒生</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -84,7 +84,7 @@
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 100vh;">
   <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">
@@ -148,19 +148,23 @@
   
 
 <div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+     style="background: url('https://tuapi.eees.cc/api.php?category=fengjing&type=302') no-repeat center center; background-size: cover;">
   <div class="full-bg-img">
     <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="归档"></span>
+            <span id="subtitle" data-typed-text="花开堪折直须折  莫待无花空折枝"></span>
           
         </div>
 
         
       </div>
 
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
       
     </div>
   </div>
@@ -174,36 +178,54 @@
     
       <div class="container nopadding-x-md">
         <div id="board"
-          >
+          style="margin-top: 0">
           
           <div class="container">
             <div class="row">
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 21 篇文章</p>
-  <hr>
-  
-  
+
+  <div class="row mx-auto index-card">
     
+    
+    <article class="col-12 col-md-12 mx-auto index-info">
+      <h1 class="index-header">
+        
+        <a href="/2022/08/12/mysql%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD/" target="_blank">
+          mysql定时备份
+        </a>
+      </h1>
+
       
-      <p class="h5">2022</p>
-    
-    <a href="/2022/08/12/mysql%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD/" class="list-group-item list-group-item-action">
-      <time>08-12</time>
-      <div class="list-group-item-title">mysql定时备份</div>
-    </a>
-  
-</div>
+      <a class="index-excerpt index-excerpt__noimg" href="/2022/08/12/mysql%E5%AE%9A%E6%97%B6%E5%A4%87%E4%BB%BD/" target="_blank">
+        <div>
+          mysql的安装目录为：/var/lib/mysql 下面咱们来一起完成自动备份mysql。 备份目录为：/home/mydb并且在每天下午18:30分以mysqldata_2022_05_01.tar.gz的压缩文件格式备份（2022_05_01是指备份执行时当天的日期）。 最后只保留最近15天的备份。 第一步：新建目录备份目录。 1mkdir /home/ubuntu/demo/backup
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta mr-3">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-08-12 14:53" pubdate>
+              2022-08-12
+            </time>
+          </div>
+        
+        
+        
+      </div>
+    </article>
+  </div>
+
 
 
   <nav aria-label="navigation">
     <span class="pagination" id="pagination">
-      <a class="extend prev" rel="prev" href="/archives/2022/"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/archives/2022/">1</a><span class="page-number current">2</span>
+      <a class="extend prev" rel="prev" href="/page/2/#board"><i class="iconfont icon-arrowleft"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/#board">2</a><span class="page-number current">3</span>
     </span>
   </nav>
-
 
 
 
@@ -291,7 +313,37 @@
       }
       var text = subtitle.getAttribute('data-typed-text');
       
-        typing(text);
+        jQuery.ajax({
+          type: 'GET',
+          url: 'https://v1.hitokoto.cn/',
+          headers: {},
+          dataType: 'json',
+          success: function(result) {
+            var apiText;
+            if (result) {
+              var keys = 'hitokoto'.split(',');
+              if (result instanceof Array) {
+                result = result[0];
+              }
+              for (const k of keys) {
+                var value = result[k];
+                if (typeof value === 'string') {
+                  apiText = value;
+                  break;
+                } else if (value instanceof Object) {
+                  result = value;
+                }
+              }
+            }
+            apiText ? typing(apiText) : typing(text);
+          },
+          error: function(xhr, status, error) {
+            if (error) {
+              console.error('Failed to request https://v1.hitokoto.cn/:', error);
+            }
+            typing(text);
+          }
+        })
       
     })(window, document);
   </script>

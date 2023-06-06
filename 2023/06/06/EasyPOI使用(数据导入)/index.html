@@ -16,24 +16,22 @@
   <meta name="author" content="czr">
   <meta name="keywords" content="">
   
-    <meta name="description" content="class文件反编译成java文件工具：jad 下载链接：https:&#x2F;&#x2F;varaneckas.com&#x2F;jad&#x2F; 下载完成后解压缩，然后把需要反编译的文件夹复制倒jad.exe同级目录下   然后再地址栏输入cmd并按回车，打开命令行窗口，输入以下命令 1jad -o -r -s java -d src class&#x2F;**&#x2F;*.class   jad命令的参数含义如下：    -o：覆盖旧文件，而且">
+    <meta name="description" content="EasyPOI使用(数据导入)大部分与导出一致，主要是接收文件，设置id为空，从库里先获取民族、部门、职称之类的信息，然后与输入的进行匹配，匹配之后设置相应id controller1234567891011121314151617181920212223242526272829303132333435363738394041424344@RestController@RequestMapping">
 <meta property="og:type" content="article">
-<meta property="og:title" content="class反编译成java">
-<meta property="og:url" content="http://czrgitee.gitee.io/2023/06/05/class%E5%8F%8D%E7%BC%96%E8%AF%91%E6%88%90java/index.html">
+<meta property="og:title" content="EasyPOI使用(数据导入)">
+<meta property="og:url" content="http://czrgitee.gitee.io/2023/06/06/EasyPOI%E4%BD%BF%E7%94%A8(%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5)/index.html">
 <meta property="og:site_name" content="安徒生">
-<meta property="og:description" content="class文件反编译成java文件工具：jad 下载链接：https:&#x2F;&#x2F;varaneckas.com&#x2F;jad&#x2F; 下载完成后解压缩，然后把需要反编译的文件夹复制倒jad.exe同级目录下   然后再地址栏输入cmd并按回车，打开命令行窗口，输入以下命令 1jad -o -r -s java -d src class&#x2F;**&#x2F;*.class   jad命令的参数含义如下：    -o：覆盖旧文件，而且">
+<meta property="og:description" content="EasyPOI使用(数据导入)大部分与导出一致，主要是接收文件，设置id为空，从库里先获取民族、部门、职称之类的信息，然后与输入的进行匹配，匹配之后设置相应id controller1234567891011121314151617181920212223242526272829303132333435363738394041424344@RestController@RequestMapping">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/czrgitee/typora-drawing-bed/raw/master/image/202306051555482.png">
-<meta property="article:published_time" content="2023-06-05T07:49:40.000Z">
-<meta property="article:modified_time" content="2023-06-05T08:00:17.518Z">
+<meta property="article:published_time" content="2023-06-06T02:22:07.000Z">
+<meta property="article:modified_time" content="2023-06-06T08:40:53.190Z">
 <meta property="article:author" content="czr">
-<meta property="article:tag" content="java">
+<meta property="article:tag" content="yeb">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://gitee.com/czrgitee/typora-drawing-bed/raw/master/image/202306051555482.png">
   
   
   
-  <title>class反编译成java - 安徒生</title>
+  <title>EasyPOI使用(数据导入) - 安徒生</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -167,7 +165,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="class反编译成java"></span>
+            <span id="subtitle" data-typed-text="EasyPOI使用(数据导入)"></span>
           
         </div>
 
@@ -178,8 +176,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-06-05 15:49" pubdate>
-          2023年6月5日 下午
+        <time datetime="2023-06-06 10:22" pubdate>
+          2023年6月6日 上午
         </time>
       </span>
     
@@ -190,7 +188,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          354 字
+          3k 字
         
       </span>
     
@@ -201,7 +199,7 @@
         
         
         
-          3 分钟
+          26 分钟
         
       </span>
     
@@ -239,12 +237,12 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">class反编译成java</h1>
+            <h1 style="display: none">EasyPOI使用(数据导入)</h1>
             
               <p class="note note-info">
                 
                   
-                    本文最后更新于：2023年6月5日 下午
+                    本文最后更新于：2023年6月6日 下午
                   
                 
               </p>
@@ -252,14 +250,11 @@
             
               <div class="markdown-body">
                 
-                <h3 id="class文件反编译成java文件"><a href="#class文件反编译成java文件" class="headerlink" title="class文件反编译成java文件"></a>class文件反编译成java文件</h3><p>工具：jad</p>
-<p>下载链接：<a target="_blank" rel="noopener" href="https://zywi.cn/?golink=aHR0cHM6Ly92YXJhbmVja2FzLmNvbS9qYWQv">https://varaneckas.com/jad/</a></p>
-<p>下载完成后解压缩，然后把需要反编译的文件夹复制倒jad.exe同级目录下</p>
-<p><img src="https://gitee.com/czrgitee/typora-drawing-bed/raw/master/image/202306051555482.png" srcset="/img/loading.gif" lazyload alt="image-20230605155513388"> </p>
-<p>然后再地址栏输入cmd并按回车，打开命令行窗口，输入以下命令</p>
-<figure class="highlight cmake"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs cmake">jad -o -r -s java -d src class/**/*.class<br></code></pre></td></tr></table></figure>
+                <h2 id="EasyPOI使用-数据导入"><a href="#EasyPOI使用-数据导入" class="headerlink" title="EasyPOI使用(数据导入)"></a>EasyPOI使用(数据导入)</h2><p>大部分与导出一致，主要是接收文件，设置id为空，从库里先获取民族、部门、职称之类的信息，然后与输入的进行匹配，匹配之后设置相应id</p>
+<h4 id="controller"><a href="#controller" class="headerlink" title="controller"></a>controller</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@RestController</span><br><span class="hljs-meta">@RequestMapping(&quot;/employee/basic&quot;)</span><br><span class="hljs-meta">@Api(tags = &quot;EmployeeController&quot;)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">EmployeeController</span> &#123;<br><br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> IEmployeeService employeeService;<br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> INationService nationService;<br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> IPoliticsStatusService politicsStatusService;<br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> IPositionService positionService;<br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> IJoblevelService joblevelService;<br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> IDepartmentService departmentService;<br><br><br>    <span class="hljs-meta">@ApiOperation(value = &quot;导入数据&quot;)</span><br>    <span class="hljs-meta">@PostMapping(value = &quot;/import&quot;)</span><br>    <span class="hljs-keyword">public</span> RspBean <span class="hljs-title function_">importEmployee</span><span class="hljs-params">(MultipartFile file)</span> &#123;<br>        <span class="hljs-type">ImportParams</span> <span class="hljs-variable">params</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ImportParams</span>();<br>        params.setTitleRows(<span class="hljs-number">1</span>);  <span class="hljs-comment">//去掉标题行</span><br><br>        List&lt;Nation&gt; nations = nationService.list();<br>        List&lt;PoliticsStatus&gt; politicsStatuses = politicsStatusService.list();<br>        List&lt;Position&gt; positions = positionService.list();<br>        List&lt;Joblevel&gt; joblevels = joblevelService.list();<br>        List&lt;Department&gt; departments = departmentService.list();<br><br><br>        <span class="hljs-type">Integer</span> <span class="hljs-variable">integer</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-keyword">try</span> &#123;<br>            List&lt;Employee&gt; list = ExcelImportUtil.importExcel(file.getInputStream(), Employee.class, params);<br>            integer = employeeService.importEmployee(list, nations, politicsStatuses, positions, joblevels, departments);<br>        &#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;<br>            e.printStackTrace();<br>        &#125;<br>        <span class="hljs-keyword">return</span> RspBean.success(<span class="hljs-string">&quot;success!&quot;</span>, integer);<br>    &#125;<br><br>&#125;<br><br></code></pre></td></tr></table></figure>
 
-<p> <strong>jad命令的参数含义如下：</strong><br>    -o：覆盖旧文件，而且不用提示确认。<br>    -r：重新加载生成包结构。<br>    -s (java)：定义输出文件的扩展名。jad为默认扩展名，我们反编译后当然是要.java源文件了。<br>    -d：输出文件的目录。src表示反编译后的所有文件都放在src目录下。<br>    class&#x2F;**&#x2F;*.class：class是需要反编译的文件夹的名字，整个表示class目录下的所有class文件。</p>
+<h4 id="service"><a href="#service" class="headerlink" title="service"></a>service</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Service</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">EmployeeServiceImpl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">ServiceImpl</span>&lt;EmployeeMapper, Employee&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title class_">IEmployeeService</span> &#123;<br><br>    <span class="hljs-meta">@Autowired</span><br>    <span class="hljs-keyword">private</span> EmployeeMapper employeeMapper;<br><br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 导入数据</span><br><span class="hljs-comment">     *</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> list</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> nations</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> politicsStatuses</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> positions</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> joblevels</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span></span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-meta">@Transactional</span><br>    <span class="hljs-keyword">public</span> Integer <span class="hljs-title function_">importEmployee</span><span class="hljs-params">(List&lt;Employee&gt; list, List&lt;Nation&gt; nations, List&lt;PoliticsStatus&gt; politicsStatuses, List&lt;Position&gt; positions, List&lt;Joblevel&gt; joblevels, List&lt;Department&gt; departments)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span> (Employee employee : list) &#123;<br>            employee.setId(<span class="hljs-literal">null</span>);<span class="hljs-comment">//设置id为空</span><br>            <span class="hljs-keyword">for</span> (Nation nation : nations) &#123;<br>                <span class="hljs-keyword">if</span> (nation.getName().equals(employee.getNation().getName())) &#123;<br>                    employee.setNationId(nation.getId());<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">for</span> (PoliticsStatus politicsStatus : politicsStatuses) &#123;<br>                <span class="hljs-keyword">if</span> (politicsStatus.getName().equals(employee.getPoliticsStatus().getName())) &#123;<br>                    employee.setPoliticId(politicsStatus.getId());<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">for</span> (Position position : positions) &#123;<br>                <span class="hljs-keyword">if</span> (position.getName().equals(employee.getPosition().getName())) &#123;<br>                    employee.setPosId(position.getId());<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">for</span> (Joblevel joblevel : joblevels) &#123;<br>                <span class="hljs-keyword">if</span> (joblevel.getName().equals(employee.getJoblevel().getName())) &#123;<br>                    employee.setJobLevelId(joblevel.getId());<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">for</span> (Department department : departments) &#123;<br>                <span class="hljs-keyword">if</span> (department.getName().equals(employee.getDepartment().getName())) &#123;<br>                    employee.setDepartmentId(department.getId());<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">if</span> (<span class="hljs-number">1</span> == employeeMapper.insert(employee)) &#123;<br>                i++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> i;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
 
                 
               </div>
@@ -272,7 +267,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/java/">#java</a>
+        <a href="/tags/yeb/">#yeb</a>
       
     </div>
   
@@ -284,8 +279,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>class反编译成java</div>
-      <div>http://czrgitee.gitee.io/2023/06/05/class反编译成java/</div>
+      <div>EasyPOI使用(数据导入)</div>
+      <div>http://czrgitee.gitee.io/2023/06/06/EasyPOI使用(数据导入)/</div>
     </div>
     <div class="license-meta">
       
@@ -297,7 +292,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年6月5日</div>
+          <div>2023年6月6日</div>
         </div>
       
       
@@ -329,18 +324,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/06/06/EasyPOI%E4%BD%BF%E7%94%A8(%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA)/" title="EasyPOI使用">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">EasyPOI使用</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/06/05/%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E5%8A%9F%E8%83%BD/" title="员工管理功能">
-                        <span class="hidden-mobile">员工管理功能</span>
+                      <a href="/2023/06/06/EasyPOI%E4%BD%BF%E7%94%A8(%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%87%BA)/" title="EasyPOI使用">
+                        <span class="hidden-mobile">EasyPOI使用</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
